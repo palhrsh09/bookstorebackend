@@ -1,4 +1,5 @@
 # Bookstore Backend API
+## ive included my .env file still so u can  use that according to that can setup in ur device see it
 ### This is the backend service for a Bookstore application, built using Node.js, Express, and MongoDB. The service provides APIs for user authentication, managing books, handling shopping carts, and processing orders.
 #### Installation
 ##### To run this project locally:
