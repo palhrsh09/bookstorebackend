@@ -25,10 +25,10 @@ npm start
 
 
 ### Database Setup
-Ensure MySQL is running and you have created a database named bookstore_d (or modify the .env file accordingly).
+Ensure MySQL is running and you have created a database named bookstore_d (or modify the .env file accordingly). can use the sql files to see and creat tables 
 Run the necessary migrations or scripts to create the required tables for users, books, cart, and orders.
 For example, you may need to create tables like:
-Users
+ #### Users
 sqlCopyCREATE TABLE users (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(255),
@@ -36,33 +36,7 @@ sqlCopyCREATE TABLE users (
   password VARCHAR(255),
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-Books
-sqlCopyCREATE TABLE books (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  title VARCHAR(255),
-  author VARCHAR(255),
-  description TEXT,
-  price DECIMAL(10, 2),
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-Cart
-sqlCopyCREATE TABLE cart (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  user_id INT,
-  book_id INT,
-  quantity INT,
-  FOREIGN KEY (user_id) REFERENCES users(id),
-  FOREIGN KEY (book_id) REFERENCES books(id)
-);
-Orders
-sqlCopyCREATE TABLE orders (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  user_id INT,
-  total DECIMAL(10, 2),
-  status VARCHAR(255),
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (user_id) REFERENCES users(id)
-);
+
 ## API Endpoints
 Authentication
 ## Login
